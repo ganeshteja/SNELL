@@ -1,0 +1,312 @@
+
+const int arraySize = 23;
+
+
+int rows[arraySize][arraySize] = {
+{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, 
+ {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1},
+{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, 
+{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, 
+{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1},
+ {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, 
+ {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+ {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1},
+ {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1},
+{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, 
+ {0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, 
+ {1, 1, 1, 1, 1, 1, 1, 1, 1}, 
+ {0, 0, 0, 0, 0, 0, 0, 0, -1},
+ {0, 0, 0, 0, 0, 0, 0, -1}, 
+ {0, 0, 0, 0, 0, 0, -1},
+{0, 0, 0, 0, 0, -1}, 
+{1, 1, 1, 1, 1},
+{0, 0, 0, 0, -1},
+ {0, 0, 0, -1}, 
+ {0, 0, -1},
+{0, -1}, 
+{1}};
+
+char policy[] = {"NL|US&Civ&Op&A4&A5&A6|A7&A8&A9&A10&A11|Gov&Op1&A41&A51&A61|A71&A81&A91&A101&A111|Gov1"};
+char attributes[arraySize][5] = {"NL","US","Civ","Op","A4","A5","A6","A7","A8","A9","A10","A11","Gov","Op1","A41","A51","A61","A71","A81","A91","A101","A111","Gov1"};
+
+
+const int arraySize = 22;
+int rows[arraySize][arraySize] = {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {1, 1, 1, 1, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, -1}, {1, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, -1}, {1, 1, 1, 1, 1}, {0, 0, 0, 0, -1}, {1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}, {0, 0, 0, -1}, {0, 0, -1}, {0, -1}, {1}};
+char policy[] = {"NL|US&Civ&Op&A4&A5&A6|A7&A8&A9&A10|A11&A12|B1&B2|Op1|Op2|CAA&TUE&FBI&CIA|Gov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ", "Op","A4","A5","A6","A7","A8","A9","A10","A11","A12", "B1", "B2", "OP1","OP2","CAA","TUE","FBI","CIA","Gov"};
+
+
+
+const int arraySize = 21;
+int rows[arraySize][arraySize] = {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, -1}, {1, 1, 1, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, -1}, {1, 1, 1, 1, 1}, {0, 0, 0, 0, -1}, {1, 1, 1, 1}, {0, 0, 0, -1}, {1, 1, 1}, {1, 1, 1}, {1, 1, 1}, {0, 0, -1}, {0, -1}, {1}};
+
+char policy[] = {"NLorUSandCivandOpandA4andA5andA6orA7andA8andA9andA10orA11andA12orB1andB2orOp1orOp2orCAAandTUEandFBIorGov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ", "Op","A4","A5","A6","A7","A8","A9","A10","A11","A12", "B1", "B2", "OP1","OP2","CAA","TUE","FBI","Gov"};
+
+
+const int arraySize = 20;
+int rows[arraySize][arraySize] = {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, -1}, {1, 1, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, -1}, {1, 1, 1, 1}, {0, 0, 0, -1}, {1, 1, 1}, {0, 0, -1}, {1, 1}, {1, 1}, {1, 1}, {0, -1}, {1}};
+
+char policy[] = {"NLorUSandCivandOpandA4andA5andA6orA7andA8andA9andA10orA11andA12orB1andB2orOp1orOp2orCAAandTUEorGov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ", "Op","A4","A5","A6","A7","A8","A9","A10","A11","A12", "B1", "B2", "OP1","OP2","CAA","TUE","Gov"};
+
+
+const int arraySize = 19;
+int rows[arraySize][arraySize] = {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, -1}, {1, 1, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, -1}, {1, 1, 1, 1}, {0, 0, 0, -1}, {1, 1, 1}, {0, 0, -1}, {1, 1}, {1, 1}, {1, 1}, {0, -1}};
+
+char policy[] = {"NLorUSandCivandOpandA4andA5andA6orA7andA8andA9andA10orA11andA12orB1andB2orOp1orOp2orCAAandGov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ", "Op","A4","A5","A6","A7","A8","A9","A10","A11","A12", "B1", "B2", "OP1","OP2","CAA","Gov"};
+
+
+const int arraySize = 18;
+int rows[arraySize][arraySize] = {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, -1}, {1, 1, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, -1}, {1, 1, 1, 1}, {0, 0, 0, -1}, {1, 1, 1}, {0, 0, -1}, {1, 1}, {1, 1}, {0, -1}};
+
+char policy[] = {"NLorUSandCivandOpandA4andA5andA6orA7andA8andA9andA10orA11andA12orB1andB2orOp1orOp2andGov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ", "Op","A4","A5","A6","A7","A8","A9","A10","A11","A12", "B1", "B2", "OP1","OP2","Gov"};
+
+
+const int arraySize = 17;
+int rows[arraySize][arraySize] = {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, -1}, {1, 1, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, -1}, {1, 1, 1, 1}, {0, 0, 0, -1}, {1, 1, 1}, {0, 0, -1}, {1, 1}, {0, -1}};
+
+char policy[] = {"NLorUSandCivandOpandA4andA5andA6orA7andA8andA9andA10orA11andA12orB1andB2orOp1andGov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ", "Op","A4","A5","A6","A7","A8","A9","A10","A11","A12", "B1", "B2", "OP1","Gov"};
+
+
+const int arraySize = 16;
+int rows[arraySize][arraySize] = {
+{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, -1}, {1, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, -1}, {0, 0, 0, -1}, {1, 1, 1}, {0, 0, -1}, {1, 1}, {0, -1}, {1}};
+
+char policy[] = {"NLorUSandCivandOpandA4andA5andA6orA7andA8andA9andA10orA11andA12orB1andB2orGov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ", "Op","A4","A5","A6","A7","A8","A9","A10","A11","A12","B1","B2","Gov"};
+
+
+const int arraySize = 15;
+int rows[arraySize][arraySize] =   {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, 0, -1}, {0, 0, 0, 0, 0, -1}, {1, 1, 1, 1, 1}, {0, 0, 0, 0, -1}, {0, 0, 0, -1}, {0, 0, -1}, {1, 1}, {0, -1}, {1}, {1}};
+
+char policy[] = {"NL or US and Civ and Op and A4 and A5 and A6 or A7 and A8 and A9 and A10 or A11 and A12 or B1 or Gov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ", "Op","A4","A5","A6","A7","A8","A9","A10","A11","A12","B1","Gov"};
+
+
+const int arraySize = 14;
+int rows[arraySize][arraySize] = {
+    {1,1,1,1,1,1,1,1,1,1},
+    {1,1,1,1,1,1,1,1,1,1},
+    {0,0,0,0,0,0,0,0,0,-1},
+    {0,0,0,0,0,0,0,0,-1},
+    {0,0,0,0,0,0,0,-1},
+    {0,0,0,0,0,0,-1},
+    {0,0,0,0,0,-1},
+    {1,1,1,1,1},
+    {0,0,0,0,-1},
+    {0,0,0,-1},
+    {0,0,-1},
+    {1,1},
+    {0,-1},
+    {1}
+};
+
+
+char policy[] = {"NL or US and Civ and Op and A4 and A5 and A6 or A7 and A8 and A9 and A10 or A11 and A12 or Gov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ", "Op","A4","A5","A6","A7","A8","A9","A10","A11","A12","Gov"};
+
+
+
+const int arraySize = 13;
+int rows[arraySize][arraySize] = {
+    {1,1,1,1,1,1,1,1,1,1},
+    {1,1,1,1,1,1,1,1,1,1},
+    {0,0,0,0,0,0,0,0,0,-1},
+    {0,0,0,0,0,0,0,0,-1},
+    {0,0,0,0,0,0,0,-1},
+    {0,0,0,0,0,0,-1},
+    {0,0,0,0,0,-1},
+    {1,1,1,1,1},
+    {0,0,0,0,-1},
+    {0,0,0,-1},
+    {0,0,-1},
+    {0,-1},
+    {1}
+};
+
+char policy[] = {"NL or US and Civ and Op and A4 and A5 and A6 or A7 and A8 and A9 and A10 and A11 or Gov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ", "Op","A4","A5","A6","A7","A8","A9","A10","A11","Gov"};
+
+
+const int arraySize = 12;
+int rows[arraySize][arraySize] = {
+    {1, 1, 1, 1, 1, 1, 1, 1, 1},
+    {1, 1, 1, 1, 1, 1, 1, 1, 1},
+    {0, 0, 0, 0, 0, 0, 0, 0, -1},
+    {0, 0, 0, 0, 0, 0, 0, -1},
+    {0,0,0,0,0,0,-1},
+    {0,0,0,0,0,-1},
+    {0,0,0,0,-1},
+    {1,1,1,1},
+    {0,0,0,-1},
+    {0,0,-1},
+    {0,-1},
+    {1}
+};
+
+
+char policy[] = {"NL or US and Civ and Op and A4 and A5 and A6 or A7 and A8 and A9 and A10 or Gov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ", "Op","A4","A5","A6","A7","A8","A9","A10","Gov"};
+
+
+const int arraySize = 11;
+int rows[arraySize][arraySize] = {
+    {1, 1, 1, 1, 1, 1, 1, 1},
+    {1, 1, 1, 1, 1, 1, 1, 1},
+    {0,0,0,0,0,0,0,-1},
+    {0,0,0,0,0,0,-1},
+    {0,0,0,0,0,-1},
+    {0,0,0,0,-1},
+    {0,0,0,-1},
+    {1, 1, 1},
+    {0, 0, -1},
+    {0,-1},
+    {1}
+};
+
+
+char policy[] = {"NL or US and Civ and Op and A4 and A5 and A6 or A7 and A8 and A9or Gov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ", "Op","A4","A5","A6","A7","A8","A9","Gov"};
+
+
+
+
+const int arraySize = 10;
+int rows[arraySize][arraySize] = {
+    {1, 1, 1, 1, 1, 1, 1},
+    {1, 1, 1, 1, 1, 1, 1},
+    {0, 0, 0, 0, 0, 0, 0, -1},
+    {0, 0, 0, 0, 0, 0, -1},
+    {0, 0, 0, 0, 0, -1},
+    {0,0,0,0,-1},
+    {0,0,0,-1},
+    {0,0,-1},
+    {0,-1},
+    {1}
+};
+
+
+
+char policy[] = {"NL or US and Civ and Op and A4 and A5 and A6 or A7 and A8 or Gov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ", "Op","A4","A5","A6","A7","A8","Gov"};
+
+
+
+const int arraySize = 9;
+
+
+int rows[arraySize][arraySize] = {
+{1, 1, 1, 1, 1, 1},
+{1, 1, 1, 1, 1, 1},
+{0, 0, 0, 0, 0, -1}, 
+{0, 0, 0, 0, -1},
+ {0, 0, 0, -1}, 
+ {0, 0, -1},
+{0, -1}, 
+{1},
+{1}};
+
+char policy[] = {"NL or US and Civ and Op and A4 and A5 and A6 or A7 or Gov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ", "Op","A4","A5","A6","A7","Gov"};
+
+
+
+const int arraySize = 8;
+
+int rows[arraySize][arraySize] = {
+{1, 1, 1, 1, 1, 1},
+{1, 1, 1, 1, 1, 1},
+{0, 0, 0, 0, 0, -1}, 
+{0, 0, 0, 0, -1},
+ {0, 0, 0, -1}, 
+ {0, 0, -1},
+{0, -1}, 
+{1}};
+
+char policy[] = {"NL|US&Civ&Op&A4&A5&A6|Gov"};
+char attributes[arraySize][5] = {"NL","US","Civ","Op","A4","A5","A6","Gov"};
+
+
+const int arraySize = 7;
+int rows[arraySize][arraySize] = {
+    {1,1,1,1,1},
+    {1,1,1,1,1},
+    {0,0,0,0,-1},
+    {0,0,0,-1},
+    {0,0,-1},
+    {0,-1},
+    {1}
+};
+
+char policy[] = {"NL or US and Civ and Op and A4 and A5 or Gov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ", "Op","A4","A5","Gov"};
+
+
+const int arraySize = 6;
+int rows[arraySize][arraySize] = {
+    {1,1,1,1},
+    {1,1,1,1},
+    {0,0,0,-1},
+    {0,0,-1},
+    {0,-1},
+    {1}
+};
+
+char policy[] = {"NL or US and Civ and Op and A4 or Gov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ", "Op","A4","Gov"};
+
+
+const int arraySize = 5;
+int rows[arraySize][arraySize] = {{1,1,1}, {1,1,1}, {0,0,-1}, {0,-1},{1}};
+
+char policy[] = {"NL or US and Civ and Op or Gov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ", "Op","Gov"};
+
+
+
+const int arraySize = 4;
+int rows[arraySize][arraySize] = {
+    {1,1},
+    {1,1},
+    {0,-1},
+    {1}
+};
+
+char policy[] = {"NL or US and Civ or Gov"};
+char attributes[arraySize][5] = {"NL", "US", "Civ","Gov"};
+
+
+
+const int arraySize = 3;
+int rows[arraySize][arraySize] = {
+    {1},
+    {1},
+    {1}
+};
+
+char policy[] = {"NL or US or Gov"};
+char attributes[arraySize][5] = {"NL", "US","Gov"};
+
+
+const int arraySize = 2;
+int rows[arraySize][arraySize] = {
+    {1}, {1},
+};
+
+char policy[] = {"NL or Gov"};
+char attributes[arraySize][5] = {"NL", "Gov"};
+
+
+
+const int arraySize = 1;
+int rows[arraySize][arraySize] = {
+    {1}
+};
+
+char policy[] = {"Gov"};
+char attributes[arraySize][5] = {"Gov"};
